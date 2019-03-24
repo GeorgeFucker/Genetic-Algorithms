@@ -1,3 +1,5 @@
+import numpy as np
+
 class Operator:
 
     @staticmethod
@@ -23,7 +25,7 @@ class Operator:
             idx = np.random.randint(gene_length - points[-1])
             offspring += args[-1][idx: idx + (gene_length - points[-1])]
 
-            return [offspring]
+            return offspring
 
         return func
 
@@ -45,6 +47,6 @@ class Operator:
 
             gene[new_idx: new_idx + length] = gene[old_idx: old_idx + length]
 
-            return [gene]
+            return gene
 
         return func
