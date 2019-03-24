@@ -9,7 +9,7 @@ Method run() shows changing of the population over time. Also you could see popu
 
 To see example just look at [test.py](https://github.com/GeorgeFucker/Genetic-Algorithms/blob/master/src/test.py).
 
-Package utils has got [genetic operators](https://github.com/GeorgeFucker/Genetic-Algorithms/tree/master/src/utils/operators), [policies](https://github.com/GeorgeFucker/Genetic-Algorithms/tree/master/src/utils/policies) and Converter implementations.
+Package utils has got [genetic operators](https://github.com/GeorgeFucker/Genetic-Algorithms/tree/master/src/utils/operators), [policies](https://github.com/GeorgeFucker/Genetic-Algorithms/tree/master/src/utils/policies) and [Converter](https://github.com/GeorgeFucker/Genetic-Algorithms/blob/master/src/utils/converter.py) implementations.
 
 [The Converter](https://github.com/GeorgeFucker/Genetic-Algorithms/blob/master/src/utils/converter.py) is just a class which converts integer numbers into binary or grey representations and vice versa with appropriate number of digits.
 There are three modules of genetic operators.
