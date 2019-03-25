@@ -49,7 +49,7 @@ def matyas():
 
 def levi():
     f = lambda x, y: (np.sin(3 * np.pi * x)) ** 2 + (x - 1) ** 2 * (1 + (np.sin(3 * np.pi * y)) ** 2) + \
-                     (y + 1) ** 2 * (1 + (np.sin(2 * np.pi * y)) ** 2)
+                     (y - 1) ** 2 * (1 + (np.sin(2 * np.pi * y)) ** 2)
     interval_x = interval_y = (-10, 10)
 
     return f, interval_x, interval_y
@@ -101,7 +101,7 @@ def holder_table():
 
 def mccormick():
     f = lambda x, y: np.sin(x + y) + (x - y) ** 2 - 1.5 * x + 2.5 * y + 1
-    interval_x = (-1,5, 4)
+    interval_x = (-1.5, 4)
     interval_y = (-3, 4)
 
     return f, interval_x, interval_y

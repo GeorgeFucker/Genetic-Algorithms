@@ -28,6 +28,8 @@ class Elit(Model):
 
         super().run(func, *intervals, n=n, eps=eps)
 
+        data_file = open('data.txt', 'w')
+
         for i in range(epochs):
 
             if i % t == 0:
@@ -72,5 +74,9 @@ class Elit(Model):
             # Change change worst individual to a new better offspring
             self._population[worst_idx] = offspring
 
+            # Save data
+            to_write = 'Epoch {}: {}\n'.format(i, self._population)
+            data_file.write(to_write)
 
+        data_file.close()
 

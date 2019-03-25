@@ -136,6 +136,7 @@ class Model:
         plt.xlabel('epoch')
         plt.ylabel('function value')
         plt.legend()
+        plt.savefig('result.png')
         plt.show()
 
     def plot_graph(self):
