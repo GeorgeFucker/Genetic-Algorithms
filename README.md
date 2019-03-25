@@ -27,19 +27,26 @@ I was inspired by series of articles [here](https://neuronus.com/theory/em/). Th
 Example:
 
 Function:
-{\displaystyle f(x,y)=-20\exp \left[-0.2{\sqrt {0.5\left(x^{2}+y^{2}\right)}}\right]}
-{\displaystyle -\exp \left[0.5\left(\cos 2\pi x+\cos 2\pi y\right)\right]+e+20} {\displaystyle -\exp \left[0.5\left(\cos 2\pi x+\cos 2\pi y\right)\right]+e+20}
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/ea61c2670922e5564125165b769f9a6abcca209e)
 
-![Plot](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Goldstein_Price_function.pdf/page1-300px-Goldstein_Price_function.pdf.jpg)
+Global optimum:
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a70149aee356dd9ee6f42993df754bd28e6a9560)
+
+Search domain:
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/1160700c3864138c84f387e709f1b7a8e416c535)
+
+![Plot](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Levi_function_13.pdf/page1-300px-Levi_function_13.pdf.jpg)
 
 Convergence of the algorithm:
-![Plot](https://github.com/GeorgeFucker/Genetic-Algorithms/blob/master/src/tests/goldstein/result.png)
+![Plot](https://github.com/GeorgeFucker/Genetic-Algorithms/blob/master/src/tests/levi/result.png?raw=true)
 
-Population^
+Population:
 
-Epoch 0: [(1.0, -1.5), (1.5, 1.5), (-0.5, -2.0), (0.0, 1.0), (-2.0, 1.0), (-1.5, -1.5), (1.0, -1.0), (-2.0, -1.0), (-0.5, -1.5), (-1.0, -0.5), (-2.0, -0.5), (1.0, -0.5), (-0.5, -0.5), (0.5, 1.0), (1.0, 1.0), (1.0, -0.5), (-0.5, -1.0), [-1.5, -1.0], (0.0, 1.5), (-2.0, 0.5)]
-Epoch 10: [[1.0, 1.0], [-1.0, -1.0], [-1.0, -1.0], [1.0, 1.0], [-1.5, -1.0], [1.0, -0.5], (1.0, -1.0), [-1.5, -1.0], (-0.5, -1.5), (-1.0, -0.5), (1.5, 1.0), (1.0, -0.5), (-0.5, -0.5), (0.5, 1.0), (1.0, 1.0), (1.0, -0.5), (-0.5, -1.0), [-1.5, -1.0], [0.5, 1.0], [-1.5, -1.0]]
-Epoch 20: [[1.0, 1.0], [1.0, 0.5], [-1.5, -1.0], [1.0, 1.0], [0.5, -1.0], [1.0, -0.5], [-0.5, -1.0], [-0.5, -1.0], (-0.5, -1.5), (-1.0, -0.5), (1.5, 1.0), (1.0, -0.5), (-0.5, -0.5), [0.0, -1.0], (1.0, 1.0), (1.0, -0.5), (-0.5, -1.0), [1.0, 0.5], [0.0, -1.0], [0.0, -1.0]]
-Epoch 50: [[0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0]]
+Epoch 0: [(5, 3), (5, 0), [-3, -5], (-1, 5), (-4, -5), (-5, -2), (7, -5), (-3, 1), (7, 9), (1, 4), (6, -5), (-6, -7), (-4, -1), (-6, -9), (0, 0), (-1, 0), (-5, -6), (-5, -5), (-6, 3), (0, -2)]
+Epoch 5: [(5, 3), (5, 0), [-3, -5], (-1, 5), (-4, -5), (-5, -2), (7, -5), (-3, 1), [-6, 0], (1, 4), (6, -5), [-1, 7], (-4, -1), [-5, 0], (0, 0), (-1, 0), [-4, 0], (-5, -5), (-6, 3), (0, -2)]
+Epoch 10: [(5, 3), (5, 0), [-3, -5], (-1, 5), [4, 0], (-5, -2), [-3, 1], (-3, 1), [-6, 0], (1, 4), [5, 0], [-1, 7], (-4, -1), [-5, 0], (0, 0), (-1, 0), [-4, 0], [-6, 0], (-6, 3), (0, -2)]
+Epoch 20: [[-2, 1], (5, 0), [-2, 1], (-1, 5), [4, 0], [1, 1], [-3, 1], (-3, 1), [0, -2], (1, 4), [5, 0], [0, 0], [4, 3], [1, 1], (0, 0), (-1, 0), [3, 0], [1, 1], [-3, 1], (0, -2)]
+Epoch 30: [[-2, 1], [1, 1], [-2, 1], [1, 1], [4, 0], [1, 1], [-2, 1], [-2, 0], [-2, 1], (1, 4), [1, 1], [0, 0], [1, 1], [1, 1], (0, 0), (-1, 0), [3, 0], [1, 1], [1, 1], [1, 1]]
+Epoch 50: [[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]]
 
 More examples is in folder [tests](https://github.com/GeorgeFucker/Genetic-Algorithms/tree/master/src/tests).
