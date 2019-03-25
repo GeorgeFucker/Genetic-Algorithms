@@ -129,12 +129,13 @@ class Model:
             eps = 0.0001
             x = [key] * len(value)
             y = [self._func(*i) for i in value]
-            size = [np.sqrt(abs(i)) + eps for i in y]
+            #size = [np.sqrt(abs(i)) + eps for i in y]
 
-            plt.scatter(x, y, s=size)
+            plt.scatter(x, y, label='Epoch: {}'.format(key))
 
         plt.xlabel('epoch')
         plt.ylabel('function value')
+        plt.legend()
         plt.show()
 
     def plot_graph(self):
@@ -162,11 +163,19 @@ class Model:
 
         x = self._axes[0]
         y = [self._func(i) for i in x]
+        plt.plot(x, y)
+
+        max_key = max(self._cache.keys())
+        min_key = min(self._cache.keys())
+        for key, value in self._cache.items():
+            color = 1 - (key - min_key) / (max_key - min_key)
+            x = [i[0] for i in value]
+            y = [self._func(i) for i in x]
+            plt.scatter(x, y, c=str(color), label='Epoch: {}'.format(key))
 
         plt.xlabel('x')
         plt.ylabel('f(x)')
-
-        plt.plot(x, y)
+        plt.legend()
         plt.show()
 
     def plot2D(self):
@@ -179,18 +188,30 @@ class Model:
         assert self._arg_num == 2, 'Function must 2-dimensional.'
 
         fig = plt.figure()
-        ax = plt.axes(projection='3d')
+        ax = fig.add_subplot(111, projection='3d')
 
         x, y = self._axes
         X, Y = np.meshgrid(x, y)
-
         Z = self._func(X, Y)
-
         ax.plot_surface(X, Y, Z)
+
+        max_key = max(self._cache.keys())
+        min_key = min(self._cache.keys())
+        for key, value in self._cache.items():
+            X, Y, Z = [], [], []
+            for x, y in value:
+                X.append(x)
+                Y.append(y)
+                Z.append(self._func(x, y))
+
+            color = 1 - (key - min_key) / (max_key - min_key)
+
+            ax.scatter(X, Y, Z, c=str(color), label='Epoch: {}'.format(key))
 
         ax.set_xlabel('x')
         ax.set_ylabel('y')
         ax.set_zlabel('f(x, y)')
+        ax.legend()
 
         plt.show()
 

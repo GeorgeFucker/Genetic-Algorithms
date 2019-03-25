@@ -3,6 +3,7 @@ from utils.converter import Converter
 from utils.operators.basic import Operator as op
 from utils.operators.modified import Operator as op_m
 from utils.policies import Policy
+from utils.test_functions import schaffer_2
 
 import numpy as np
 
@@ -15,12 +16,10 @@ policies = {
     'parents': Policy.random()
 }
 
-func = lambda x, y: x ** 2 + y ** 2
-interval_x = interval_y = (-10, 11)
 n = 100
-eps = 1
+eps = 0.5
 
 model = Elit(converter=converter, policies=policies, mutator=mutator, crossover=crossover)
-model.run(func, interval_x, interval_y, epochs=100, n=20, eps=eps, optimize='min', t=10, verbose=True)
+model.run(*(schaffer_2()), epochs=101, n=20, eps=eps, optimize='min', t=10, verbose=True)
 model.plot()
 model.plot_graph()
