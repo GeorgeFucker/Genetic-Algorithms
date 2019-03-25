@@ -24,4 +24,22 @@ And the last part that I will add is genetic operators which could operate with 
 
 I was inspired by series of articles [here](https://neuronus.com/theory/em/). This articles are written on Russian.
 
+Example:
 
+Function:
+{\displaystyle f(x,y)=-20\exp \left[-0.2{\sqrt {0.5\left(x^{2}+y^{2}\right)}}\right]}
+{\displaystyle -\exp \left[0.5\left(\cos 2\pi x+\cos 2\pi y\right)\right]+e+20} {\displaystyle -\exp \left[0.5\left(\cos 2\pi x+\cos 2\pi y\right)\right]+e+20}
+
+![Plot](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Goldstein_Price_function.pdf/page1-300px-Goldstein_Price_function.pdf.jpg)
+
+Convergence of the algorithm:
+![Plot](https://github.com/GeorgeFucker/Genetic-Algorithms/blob/master/src/tests/goldstein/result.png)
+
+Population^
+
+Epoch 0: [(1.0, -1.5), (1.5, 1.5), (-0.5, -2.0), (0.0, 1.0), (-2.0, 1.0), (-1.5, -1.5), (1.0, -1.0), (-2.0, -1.0), (-0.5, -1.5), (-1.0, -0.5), (-2.0, -0.5), (1.0, -0.5), (-0.5, -0.5), (0.5, 1.0), (1.0, 1.0), (1.0, -0.5), (-0.5, -1.0), [-1.5, -1.0], (0.0, 1.5), (-2.0, 0.5)]
+Epoch 10: [[1.0, 1.0], [-1.0, -1.0], [-1.0, -1.0], [1.0, 1.0], [-1.5, -1.0], [1.0, -0.5], (1.0, -1.0), [-1.5, -1.0], (-0.5, -1.5), (-1.0, -0.5), (1.5, 1.0), (1.0, -0.5), (-0.5, -0.5), (0.5, 1.0), (1.0, 1.0), (1.0, -0.5), (-0.5, -1.0), [-1.5, -1.0], [0.5, 1.0], [-1.5, -1.0]]
+Epoch 20: [[1.0, 1.0], [1.0, 0.5], [-1.5, -1.0], [1.0, 1.0], [0.5, -1.0], [1.0, -0.5], [-0.5, -1.0], [-0.5, -1.0], (-0.5, -1.5), (-1.0, -0.5), (1.5, 1.0), (1.0, -0.5), (-0.5, -0.5), [0.0, -1.0], (1.0, 1.0), (1.0, -0.5), (-0.5, -1.0), [1.0, 0.5], [0.0, -1.0], [0.0, -1.0]]
+Epoch 50: [[0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0], [0.0, -1.0]]
+
+More examples is in folder [tests](https://github.com/GeorgeFucker/Genetic-Algorithms/tree/master/src/tests).
