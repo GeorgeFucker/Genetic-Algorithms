@@ -27,7 +27,7 @@ I was inspired by series of articles [here](https://neuronus.com/theory/em/). Th
 Example:
 
 Function:
-![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/ea61c2670922e5564125165b769f9a6abcca209e)
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/34c3c75a8c0b0a1bcb07f31501f208d56aa20587)![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/ea61c2670922e5564125165b769f9a6abcca209e)
 
 Global optimum:
 ![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a70149aee356dd9ee6f42993df754bd28e6a9560)
@@ -43,10 +43,15 @@ Convergence of the algorithm:
 Population:
 
 Epoch 0: [(5, 3), (5, 0), [-3, -5], (-1, 5), (-4, -5), (-5, -2), (7, -5), (-3, 1), (7, 9), (1, 4), (6, -5), (-6, -7), (-4, -1), (-6, -9), (0, 0), (-1, 0), (-5, -6), (-5, -5), (-6, 3), (0, -2)]
+
 Epoch 5: [(5, 3), (5, 0), [-3, -5], (-1, 5), (-4, -5), (-5, -2), (7, -5), (-3, 1), [-6, 0], (1, 4), (6, -5), [-1, 7], (-4, -1), [-5, 0], (0, 0), (-1, 0), [-4, 0], (-5, -5), (-6, 3), (0, -2)]
+
 Epoch 10: [(5, 3), (5, 0), [-3, -5], (-1, 5), [4, 0], (-5, -2), [-3, 1], (-3, 1), [-6, 0], (1, 4), [5, 0], [-1, 7], (-4, -1), [-5, 0], (0, 0), (-1, 0), [-4, 0], [-6, 0], (-6, 3), (0, -2)]
+
 Epoch 20: [[-2, 1], (5, 0), [-2, 1], (-1, 5), [4, 0], [1, 1], [-3, 1], (-3, 1), [0, -2], (1, 4), [5, 0], [0, 0], [4, 3], [1, 1], (0, 0), (-1, 0), [3, 0], [1, 1], [-3, 1], (0, -2)]
+
 Epoch 30: [[-2, 1], [1, 1], [-2, 1], [1, 1], [4, 0], [1, 1], [-2, 1], [-2, 0], [-2, 1], (1, 4), [1, 1], [0, 0], [1, 1], [1, 1], (0, 0), (-1, 0), [3, 0], [1, 1], [1, 1], [1, 1]]
+
 Epoch 50: [[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]]
 
 More examples is in folder [tests](https://github.com/GeorgeFucker/Genetic-Algorithms/tree/master/src/tests).
